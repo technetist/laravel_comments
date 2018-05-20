@@ -15,7 +15,7 @@
             <form role="form" action="{{ route('register') }}"  method="post">
                 @csrf
                 <div class="form-group">
-                    <label for="username">Username</label>
+                    <label for="username" class="required-field">Username</label>
                     <input type="text"
                            class="form-control"
                            name="username"

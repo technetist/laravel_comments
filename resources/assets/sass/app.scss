@@ -1,4 +1,5 @@
-$red: FF0000;
+@import './_variables';
+
 .required-field::after {
   content: "*";
   color: $red;
