@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'CommentController@index');
+
+Route::get('register', function() {
+    return view('auth.register');
 });
+
+Route::resource('comments', 'CommentController')->except([
+    'index', 'create', 'show', 'edit', 'update',
+]);
+
+Auth::routes();
